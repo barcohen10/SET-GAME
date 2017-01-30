@@ -1,0 +1,38 @@
+.gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  /* Pink Glow */ }
+
+@keyframes pink {
+  0%, 100% {
+    box-shadow: 1px 0px 19px 4px rgba(204, 69, 134, 0.7), inset 0px 0px 10px rgba(255, 255, 255, 0.5); }
+  50% {
+    box-shadow: 0px 0px 0px 0px rgba(0, 130, 196, 0), inset 0px 0px 0px rgba(255, 255, 255, 0); } }
+  .gameBoard .column {
+    flex: 1;
+    max-width: 25%;
+    border: 5px solid #190723;
+    background-color: #190723; }
+    .gameBoard .column .card {
+      background: #251435;
+      cursor: pointer;
+      height: 33%;
+      margin-bottom: 1%;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      align-items: center;
+      justify-content: center;
+      display: flex; }
+      .gameBoard .column .card.flipped {
+        transform: rotateY(180deg); }
+      .gameBoard .column .card.selected {
+        animation: pink 2s infinite; }
+      .gameBoard .column .card .title {
+        font-size: 5.9vw;
+        color: white; }
+        .gameBoard .column .card .title.flipped {
+          color: #665a71; }
+      .gameBoard .column .card .front {
+        position: absolute;
+        height: 100%;
+        width: 100%; }

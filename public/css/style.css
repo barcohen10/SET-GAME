@@ -1,0 +1,101 @@
+.setGame header.dashboard {
+  height: 10vh;
+  width: 100%;
+  background-color: #15102a;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 10px; }
+  .setGame header.dashboard .title {
+    float: left;
+    font-size: 6vh; }
+    .setGame header.dashboard .title span:first-child {
+      color: purple; }
+    .setGame header.dashboard .title span:nth-child(2) {
+      color: green; }
+    .setGame header.dashboard .title span:nth-child(3) {
+      color: red; }
+  .setGame header.dashboard .message {
+    font-size: 2.5vh;
+    color: white; }
+  .setGame header.dashboard .dashboardButton {
+    cursor: pointer;
+    float: right;
+    border: none;
+    border-radius: 5vh;
+    color: white;
+    background-color: #fe5766;
+    width: 8vh;
+    height: 8vh;
+    text-align: center;
+    margin-right: 20px; }
+    .setGame header.dashboard .dashboardButton:hover {
+      background-color: #fe707d; }
+
+.setGame main.gameBoard {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #190723;
+  /* White Glow */ }
+
+@keyframes white {
+  0%, 100% {
+    box-shadow: 1px 0px 19px 4px rgba(255, 255, 255, 0.7), inset 0px 0px 10px rgba(255, 255, 255, 0.5); }
+  50% {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0), inset 0px 0px 0px rgba(255, 255, 255, 0); } }
+  .setGame main.gameBoard .column {
+    flex: 1;
+    max-width: 25%;
+    border: 5px solid #190723; }
+    .setGame main.gameBoard .column .card {
+      background: #251435;
+      cursor: pointer;
+      height: 32%;
+      margin-bottom: 2%;
+      transform-style: preserve-3d;
+      transition: transform 1s; }
+      .setGame main.gameBoard .column .card:last-child {
+        margin: 0; }
+      .setGame main.gameBoard .column .card.flipped {
+        transform: rotateY(180deg); }
+      .setGame main.gameBoard .column .card.selected {
+        animation: white 2s infinite; }
+      .setGame main.gameBoard .column .card .title {
+        font-size: 5.3vw;
+        color: white; }
+        .setGame main.gameBoard .column .card .title.flipped {
+          display: none; }
+      .setGame main.gameBoard .column .card .front {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .setGame main.gameBoard .column .card .front div {
+          max-height: 30%;
+          flex: 1;
+          width: 100%; }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.center-flex {
+  align-items: center;
+  justify-content: center;
+  display: flex; }

@@ -1,0 +1,28 @@
+@import "./setGame.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;  
+}
+
+html,body{
+height:100%;
+width:100%;
+margin:0;
+}
+
+.pull-right {
+  float:right;
+}
+
+.pull-left {
+  float:left;
+}
+
+.center-flex {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  }
+
+

@@ -1,0 +1,11 @@
+{
+  "name": "set",
+  "version": "1.0.0",
+  "description": "set cards game",
+  "author": "Bar Cohen",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
